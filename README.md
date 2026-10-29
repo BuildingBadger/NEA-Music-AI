@@ -1,1 +1,3 @@
 # NEA Music AI
+
+This code doesn't work as intended due to the sample data not being the right kind of data. I wanted melody notes from video game music but what I used was full video game songs. I chose this data because it was free (what i needed as this was my ALevel project) and it was large enough for me to use. If i was doing this again I would use dedicated melody tracks as the final product used all instruments I ended up with a jumbled mess of noise when mapped to a keyboard. The AI and proof of concept however works and this is a working neural netwoerk using backpropogation, just the outcome is less than ideal.
