@@ -9,7 +9,6 @@ An A-level Computer Science Non-Exam Assessment project exploring the use of art
 - [Objectives](#objectives)
 - [Features](#features)
 - [Technology](#technology)
-- [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Development](#development)
 - [Testing](#testing)
