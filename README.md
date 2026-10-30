@@ -1,7 +1,6 @@
 # NEA Music AI
 
-An A-level Computer Science Non-Exam Assessment project exploring the use of artificial intelligence in music-related applications.
-
+An A-level Computer Science Non-Exam Assessment project exploring the use of artificial intelligence to generate video-game music.
 
 ## Contents
 
@@ -10,45 +9,45 @@ An A-level Computer Science Non-Exam Assessment project exploring the use of art
 - [Features](#features)
 - [Technology](#technology)
 - [Project Structure](#project-structure)
-- [Development](#development)
+- [Training](#training)
 - [Testing](#testing)
 - [Limitations and Future Improvements](#limitations-and-future-improvements)
 - [Author](#author)
 
 ## Overview
 
-NEA Music AI is a coursework project investigating how artificial intelligence can be applied to music. The system is designed to process musical data and produce an AI-assisted result, such as generating, classifying, recommending, or transforming music.
+NEA Music AI is a coursework project investigating how artificial intelligence can be applied to music generation. The system processes musical data and uses a neural network to generate AI-assisted musical output.
 
-The project also documents the software development process, including requirements analysis, system design, implementation, testing, evaluation, and reflection.
+The project documents the software development process, including requirements analysis, system design, implementation, training, testing, evaluation, and reflection.
 
 ## Objectives
 
-- Explore the use of AI within a music-focused application.
+- Explore the use of artificial intelligence in a music-focused application.
 - Design and implement a usable software solution.
 - Process musical input in a structured and repeatable way.
-- Evaluate the quality, accuracy, or usefulness of the system's output.
+- Train a neural network to predict the next note in a sequence.
+- Evaluate the quality and usefulness of the generated output.
 - Record design decisions and development progress as part of the NEA coursework.
 
 ## Features
 
-- Video-game-Music-focused AI functionality.
+- Video-game-music-focused AI functionality.
+- Musical data processing and preparation.
+- Neural-network-based next-note prediction.
 - Input processing and validation.
-- AI-assisted output generation or analysis.
-- A user interface or command-line workflow for interacting with the system.
-- Evaluation and testing of generated results.
-
+- AI-assisted music generation.
+- Testing and evaluation of generated results.
 
 ## Technology
 
-- **Language:** C# for the AI and the maths behind it, and Python for getting and editing the data
-- **Interface:** .NET Framework.
-- **Data:** vgmusic.com
-- **Testing:** Backpropogation.
-
+- **Languages:** C# for the AI implementation and mathematical calculations; Python for obtaining and editing the training data.
+- **Framework:** .NET Framework.
+- **Dataset:** Musical data sourced from [VGMusic](https://www.vgmusic.com/).
+- **Training method:** Backpropagation and gradient descent.
 
 ## Project Structure
 
-Update the descriptions to match the repository's actual files and folders.
+Update the descriptions below if the repository structure changes.
 
 ```text
 NEA-Music-AI/
@@ -56,46 +55,47 @@ NEA-Music-AI/
 ├── models/            # Saved or trained AI models
 ├── src/               # Main source code
 ├── tests/             # Automated or manual test resources
-├── requirements.txt   # Python dependencies
+├── requirements.txt   # Python dependencies, if applicable
 └── README.md          # Project documentation
 ```
 
-## Development
+## Training
 
-A typical development workflow is:
+The AI is trained using sequences of 17 notes:
 
-1. Review the requirements and success criteria.
-2. Prepare the input data and configuration.
-3. Implement or update the relevant system component.
-4. Run the application and test representative inputs.
-5. Record the results and update the project documentation.
+- The first 16 notes are provided as input nodes.
+- The 17th note is used as the expected output.
+
+Backpropagation is used to calculate the gradients of the network's weights and biases. Gradient descent then adjusts these values iteratively to reduce the error between the predicted note and the expected note.
+
+This process aims to find suitable weights and biases that allow the network to predict the next note in a musical sequence.
 
 ## Testing
 
-Test the system using valid, invalid, and edge-case inputs. Testing should cover:
+Testing covers valid, invalid, and edge-case inputs, including:
 
 - Input validation.
-- Core AI or music-processing functionality.
-- Output format and usability.
+- Musical data processing.
+- Neural-network training and prediction.
+- Generated output format and usability.
 - Error handling.
-- Performance and repeatability where relevant.
-
-Add the project's test command here when available:
-
-```bash
-python -m pytest
-```
+- The quality and consistency of generated music.
 
 ## Limitations and Future Improvements
 
-Potential areas for further development include:
+The main limitation was the choice of training data. The dataset contained complete compositions rather than isolated melodies or lead lines. Consequently, the data included sound effects, including explosion sounds, which affected the quality and usefulness of the generated output.
 
-- Improving the quality and consistency of generated or analysed music.
-- Expanding the size and variety of the training or evaluation data.
+Potential areas for future development include:
+
+- Using a dataset better suited to the project's requirements.
+- Training the AI on isolated melodies instead of complete compositions.
+- Improving the quality and consistency of generated music.
+- Expanding the size and variety of the training and evaluation data.
 - Adding more user controls and configuration options.
 - Improving runtime performance.
+- Adding a graphical user interface.
 - Providing clearer visual feedback about how the AI produces its output.
-- Comparing multiple algorithms or model configurations.
+- Comparing different algorithms and model configurations.
 
 ## Author
 
